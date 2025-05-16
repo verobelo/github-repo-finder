@@ -1,3 +1,12 @@
+:root {
+  --color-bgr-primary: #f7f8fa;
+  --color-bgr-secondary: #ffffff;
+  --color-text-primary: #1f2937;
+  --color-text-secondary: #6b7280;
+  --color-text-tertiary: #ececec;
+  --color-button: #3b82f6;
+}
+
 @font-face {
   font-family: "fira_codelight";
   src: url("firacode-variablefont_wght-webfont.woff2") format("woff2"),
@@ -16,6 +25,20 @@
 
 body {
   font-family: "open_sansregular", sans-serif;
+  background-color: var(--color-bgr-primary);
+  color: var(--color-text-primary);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  gap: 2rem;
+  min-height: 100vh;
+  width: 100%;
+  width: 600px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 header {
@@ -30,4 +53,46 @@ h1 {
 
 h1 {
   font-weight: 600;
+}
+footer {
+  text-align: center;
+}
+
+footer a {
+  color: var(--color-text-primary);
+}
+
+.search-bar {
+  background-color: var(--color-bgr-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+.search-bar > input {
+  padding: 0.5rem 0.75rem;
+  border: 2px solid var(--color-text-tertiary);
+  background-color: var(--color-bgr-secondary);
+  border-radius: 1rem;
+  color: var(--color-text-secondary);
+  width: 100%;
+}
+input:focus,
+input:focus-visible {
+  border-color: var(--color-text-secondary);
+  outline: none;
+}
+
+.search-bar__button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.search-bar__button:hover {
+  transform: scale(1.2);
+  transition: all 0.2s ease-in-out;
 }
