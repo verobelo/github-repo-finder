@@ -62,17 +62,14 @@ footer a {
   color: var(--color-text-primary);
 }
 
-.search-bar {
+.search-bar__input {
   background-color: var(--color-bgr-secondary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 0.5rem;
   width: 100%;
   padding: 1rem;
 }
 
-.search-bar > input {
+.search-bar__input input {
   padding: 0.5rem 0.75rem;
   border: 2px solid var(--color-text-tertiary);
   background-color: var(--color-bgr-secondary);
