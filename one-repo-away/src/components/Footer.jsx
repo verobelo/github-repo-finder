@@ -1,7 +1,9 @@
+import { Text } from "@chakra-ui/react";
+
 export default function Footer() {
   return (
     <footer>
-      <p> &copy; 2025 Veronika Belozerova. All rights reserved.</p>
+      <Text> &copy; 2025 Veronika Belozerova. All rights reserved.</Text>
     </footer>
   );
 }

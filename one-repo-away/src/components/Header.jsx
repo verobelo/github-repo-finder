@@ -1,10 +1,14 @@
+import { Heading, Text } from "@chakra-ui/react";
+
 export default function Header() {
   return (
     <header>
-      <h1>One Repo Away.</h1>
-      <p>
-        <em>The perfect GitHub repo is just one search away.</em>
-      </p>
+      <Heading as="h1" size="3xl" textAlign="center">
+        One Repo Away.
+      </Heading>
+      <Text fontStyle="italic" color="gray.700">
+        The perfect GitHub repo is just one search away.
+      </Text>
     </header>
   );
 }
