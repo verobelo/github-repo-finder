@@ -40,7 +40,7 @@ export default function SearchBar() {
       </Group>
 
       <Flex w="full" gap={4}>
-        <Box flexGrow="3">
+        <Box flexGrow="4">
           <Select.Root
             collection={languages}
             fontSize="1rem"
@@ -70,7 +70,7 @@ export default function SearchBar() {
           </Select.Root>
         </Box>
 
-        <Flex flexGrow="2" gap={3}>
+        <Flex flexGrow="2" gap={4}>
           <Select.Root variant="outline" size="md" bg="white">
             <Select.Control>
               <Select.Trigger>
