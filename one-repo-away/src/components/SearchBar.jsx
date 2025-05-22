@@ -1,36 +1,29 @@
+import { Box, Group, Input, IconButton } from "@chakra-ui/react";
 import Dropdown from "./Dropdown";
+import { LuSearch } from "react-icons/lu";
 
 export default function SearchBar() {
   return (
-    <div className="search-bar">
-      <div className="search-bar__input">
-        <label htmlFor="search">
-          <input
-            type="text"
-            id="search"
-            name="search"
-            value=""
-            placeholder="Search repositories..."
-          />
-        </label>
+    <Box>
+      <Group w="full">
+        <Input
+          type="text"
+          placeholder="Search repositories..."
+          _placeholder={{ fontSize: "16px" }}
+          name="search"
+          variant="flushed"
+          size="md"
+          css={{ "--focus-color": "colors.blue.600" }}
+        />
 
-        <button className="search-bar__button">
-          <svg
-            width={26}
-            height={26}
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
-              stroke="#808080"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
-      </div>
+        <IconButton
+          aria-label="Search database"
+          variant="surface"
+          backgroundColor="blue.600"
+          color="white">
+          <LuSearch />
+        </IconButton>
+      </Group>
 
       <div className="search-bar__filters">
         <Dropdown>
@@ -54,6 +47,6 @@ export default function SearchBar() {
 
         <button className="search-bar__random-btn">Surprise Me!</button>
       </div>
-    </div>
+    </Box>
   );
 }
