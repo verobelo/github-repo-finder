@@ -2,7 +2,7 @@ import { Container, Heading, Text } from "@chakra-ui/react";
 
 export default function Header() {
   return (
-    <Container as="header" style={{ textAlign: "center" }}>
+    <Container as="header" centerContent pt="4" pb="4">
       <Heading as="h1" size="3xl">
         One Repo Away.
       </Heading>
