@@ -1,13 +1,4 @@
-/*:root {
-  --color-bgr-primary: #f7f8fa;
-  --color-bgr-secondary: #ffffff;
-  --color-text-primary: #1f2937;
-  --color-text-secondary: #6b7280;
-  --color-text-tertiary: #ececec;
-  --color-button: #3b82f6;
-}
-
-/*@font-face {
+@font-face {
   font-family: "fira_codelight";
   src: url("firacode-variablefont_wght-webfont.woff2") format("woff2"),
     url("firacode-variablefont_wght-webfont.woff") format("woff");
@@ -21,9 +12,10 @@
     url("opensans-variablefont_wdthwght-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-}*/
+}
 
 body {
   background-color: #f7f8fa;
   font-size: 1rem;
+  font-family: "open_sansregular", sans-serif;
 }
