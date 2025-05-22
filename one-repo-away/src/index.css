@@ -7,10 +7,6 @@
   --color-button: #3b82f6;
 }
 
-body {
-  background-color: var(--color-bgr-primary);
-}
-
 /*@font-face {
   font-family: "fira_codelight";
   src: url("firacode-variablefont_wght-webfont.woff2") format("woff2"),
@@ -26,3 +22,7 @@ body {
   font-weight: normal;
   font-style: normal;
 }*/
+
+body {
+  background-color: #f7f8fa;
+}
