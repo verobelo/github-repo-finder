@@ -1,22 +1,23 @@
-import { Container } from "@chakra-ui/react";
+import { Box, Container } from "@chakra-ui/react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
+import RepoCardContainer from "./components/RepoCardContainer";
 
 function App() {
   return (
     <Container
       maxW="2xl"
       w="900px"
-      m="0 auto"
-      centerContent
       display="grid"
       minH="100dvh"
-      gridTemplateRows="auto 1fr auto">
+      gridTemplateRows="auto 1fr auto"
+      gap={4}>
       <Header />
-      <main>
+      <Box as="main" display="grid" gridTemplateRows="auto 1fr" gap={6}>
         <SearchBar />
-      </main>
+        <RepoCardContainer />
+      </Box>
       <Footer />
     </Container>
   );
