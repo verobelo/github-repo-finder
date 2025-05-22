@@ -1,13 +1,15 @@
-import { Container } from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react";
 import RepoCard from "./RepoCard";
 
 export default function RepoCardContainer() {
   return (
-    <Container>
+    <Grid templateColumns="repeat(2, 1fr)" gap={4}>
       <RepoCard />
       <RepoCard />
       <RepoCard />
       <RepoCard />
-    </Container>
+      <RepoCard />
+      <RepoCard />
+    </Grid>
   );
 }
