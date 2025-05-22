@@ -1,9 +1,9 @@
-import { Text } from "@chakra-ui/react";
+import { Container, Text } from "@chakra-ui/react";
 
 export default function Footer() {
   return (
-    <footer>
+    <Container as="footer" centerContent>
       <Text> &copy; 2025 Veronika Belozerova. All rights reserved.</Text>
-    </footer>
+    </Container>
   );
 }
