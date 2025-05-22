@@ -7,8 +7,7 @@ import RepoCardContainer from "./components/RepoCardContainer";
 function App() {
   return (
     <Container
-      maxW="2xl"
-      w="900px"
+      maxW="3xl"
       display="grid"
       minH="100dvh"
       gridTemplateRows="auto 1fr auto"
