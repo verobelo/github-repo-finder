@@ -78,7 +78,7 @@ export default function SearchBar() {
           </Portal>
         </Select.Root>
 
-        <Button colorPalette="red" size="md">
+        <Button colorPalette="red" size="md" rounded="md">
           Surprise me!
         </Button>
       </Flex>
