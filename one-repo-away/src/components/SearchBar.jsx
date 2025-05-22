@@ -17,6 +17,7 @@ export default function SearchBar() {
     <Flex direction="column" gap="5" pt="4" pb="4">
       <Group attached w="full">
         <Input
+          pl="12px"
           flex="1"
           type="text"
           placeholder="Search repositories..."
