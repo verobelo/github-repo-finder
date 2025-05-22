@@ -27,13 +27,14 @@ export default function SearchBar() {
           aria-label="Search database"
           variant="surface"
           backgroundColor="blue.600"
-          color="white">
+          color="white"
+          size="md">
           <LuSearch />
         </IconButton>
       </Flex>
 
       <Flex gap="3">
-        <Select.Root collection={languages} fontSize="1rem">
+        <Select.Root collection={languages} fontSize="1rem" size="md">
           <Select.HiddenSelect />
           <Select.Control>
             <Select.Trigger>
@@ -57,7 +58,7 @@ export default function SearchBar() {
           </Portal>
         </Select.Root>
 
-        <Select.Root variant="outline">
+        <Select.Root variant="outline" size="md">
           <Select.Control>
             <Select.Trigger>
               <Select.ValueText placeholder="Filter by" />
@@ -77,7 +78,7 @@ export default function SearchBar() {
           </Portal>
         </Select.Root>
 
-        <Button colorPalette="red" fontSize="1rem">
+        <Button colorPalette="red" size="md">
           Surprise me!
         </Button>
       </Flex>
