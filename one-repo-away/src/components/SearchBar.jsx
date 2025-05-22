@@ -7,9 +7,9 @@ import {
   Button,
   Group,
   Box,
-  Spacer,
 } from "@chakra-ui/react";
 import { LuSearch } from "react-icons/lu";
+import { IoDice } from "react-icons/io5";
 import { languages } from "../logic/languages";
 
 export default function SearchBar() {
@@ -92,7 +92,7 @@ export default function SearchBar() {
           </Select.Root>
 
           <Button colorPalette="red" size="md" rounded="md">
-            Surprise me!
+            <IoDice /> Surprise me!
           </Button>
         </Flex>
       </Flex>
