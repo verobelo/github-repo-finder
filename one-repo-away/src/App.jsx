@@ -5,9 +5,18 @@ import SearchBar from "./components/SearchBar";
 
 function App() {
   return (
-    <Container maxW="xl" m="0 auto" centerContent>
+    <Container
+      maxW="2xl"
+      w="900px"
+      m="0 auto"
+      centerContent
+      display="grid"
+      minH="100dvh"
+      gridTemplateRows="auto 1fr auto">
       <Header />
-      <main>{/*<SearchBar />*/}</main>
+      <main>
+        <SearchBar />
+      </main>
       <Footer />
     </Container>
   );
