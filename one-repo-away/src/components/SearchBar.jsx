@@ -1,11 +1,19 @@
-import { Box, Group, Input, IconButton } from "@chakra-ui/react";
-import Dropdown from "./Dropdown";
+import {
+  Box,
+  Input,
+  IconButton,
+  Flex,
+  Select,
+  Portal,
+  Button,
+} from "@chakra-ui/react";
 import { LuSearch } from "react-icons/lu";
+import { languages } from "../logic/languages";
 
 export default function SearchBar() {
   return (
-    <Box>
-      <Group w="full">
+    <Flex direction="column" gap="5">
+      <Flex>
         <Input
           type="text"
           placeholder="Search repositories..."
@@ -23,30 +31,57 @@ export default function SearchBar() {
           color="white">
           <LuSearch />
         </IconButton>
-      </Group>
+      </Flex>
 
-      <div className="search-bar__filters">
-        <Dropdown>
-          <label htmlFor="language">
-            <select id="language" name="language" defaultValue="option1">
-              <option value="option1">Language</option>
-              <option value="option2">Option 2</option>
-              <option value="option3">Option 3</option>
-            </select>
-          </label>
-        </Dropdown>
-        <Dropdown>
-          <label htmlFor="sortby">
-            <select id="sortby" name="sortby" defaultValue="option1">
-              <option value="option1">Best Match</option>
-              <option value="option2">Most Stars</option>
-              <option value="option3">Most Forks</option>
-            </select>
-          </label>
-        </Dropdown>
+      <Flex gap="3">
+        <Select.Root collection={languages} fontSize="1rem">
+          <Select.HiddenSelect />
+          <Select.Control>
+            <Select.Trigger>
+              <Select.ValueText placeholder="Select language" />
+            </Select.Trigger>
+            <Select.IndicatorGroup>
+              <Select.Indicator />
+            </Select.IndicatorGroup>
+          </Select.Control>
+          <Portal>
+            <Select.Positioner>
+              <Select.Content>
+                {languages.items.map((language) => (
+                  <Select.Item item={language} key={language.value}>
+                    {language.title}
+                    <Select.ItemIndicator />
+                  </Select.Item>
+                ))}
+              </Select.Content>
+            </Select.Positioner>
+          </Portal>
+        </Select.Root>
 
-        <button className="search-bar__random-btn">Surprise Me!</button>
-      </div>
-    </Box>
+        <Select.Root variant="outline">
+          <Select.Control>
+            <Select.Trigger>
+              <Select.ValueText placeholder="Filter by" />
+            </Select.Trigger>
+            <Select.IndicatorGroup>
+              <Select.Indicator />
+            </Select.IndicatorGroup>
+          </Select.Control>
+          <Portal>
+            <Select.Positioner>
+              <Select.Content>
+                <Select.Item item="Best Match">Best Match</Select.Item>
+                <Select.Item item="Most Stars">Most Stars</Select.Item>
+                <Select.Item item="Most Forks">Most Forks</Select.Item>
+              </Select.Content>
+            </Select.Positioner>
+          </Portal>
+        </Select.Root>
+
+        <Button colorPalette="red" fontSize="1rem">
+          Surprise me!
+        </Button>
+      </Flex>
+    </Flex>
   );
 }
