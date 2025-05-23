@@ -1,4 +1,4 @@
-import { Flex, Heading, Spacer, Text } from "@chakra-ui/react";
+import { Flex, Heading, Text } from "@chakra-ui/react";
 import { ColorModeButton } from "./ui/color-mode";
 
 export default function Header() {

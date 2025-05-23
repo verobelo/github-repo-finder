@@ -5,7 +5,7 @@ import { FaGithub } from "react-icons/fa";
 
 export default function RepoCard() {
   return (
-    <Card.Root width="350px" bg={{ _dark: "gray.800" }}>
+    <Card.Root width="350px" bg={{ _dark: "#1c2128" }}>
       <Card.Body gap="2">
         <Card.Title mt="2">react-animate</Card.Title>
         <Card.Description>

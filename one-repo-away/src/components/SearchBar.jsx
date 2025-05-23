@@ -24,7 +24,7 @@ export default function SearchBar() {
           name="search"
           variant="outline"
           size="md"
-          bg={{ _dark: "gray.800" }}
+          bg={{ _dark: "#1c2128" }}
           color={{ base: "black", _dark: "whiteAlpha.900" }}
           _placeholder={{ color: { _dark: "gray.200" } }}
           css={{ "--focus-color": "colors.gray.300" }}
@@ -47,7 +47,7 @@ export default function SearchBar() {
             loopFocus
             fontSize="1rem"
             size="md"
-            bg={{ base: "white", _dark: "gray.800" }}
+            bg={{ base: "white", _dark: "#1c2128" }}
             color={{ base: "black", _dark: "whiteAlpha.900" }}>
             <Select.HiddenSelect />
             <Select.Control>
@@ -81,7 +81,7 @@ export default function SearchBar() {
             loopFocus
             variant="outline"
             size="md"
-            bg={{ base: "white", _dark: "gray.800" }}>
+            bg={{ base: "white", _dark: "#1c2128" }}>
             <Select.Control>
               <Select.Trigger>
                 <Select.ValueText placeholder="Filter by" />
@@ -102,7 +102,8 @@ export default function SearchBar() {
           </Select.Root>
 
           <Button
-            bg={{ base: "red.600", _dark: "red.500" }}
+            bg={{ base: "green.600", _dark: "green.500" }}
+            color={{ _dark: "white" }}
             size="md"
             rounded="md">
             <IoDice /> Surprise me!
