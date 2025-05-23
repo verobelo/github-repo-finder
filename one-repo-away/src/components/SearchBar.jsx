@@ -21,19 +21,20 @@ export default function SearchBar() {
           flex="1"
           type="text"
           placeholder="Search repositories..."
-          _placeholder={{ fontSize: "16px" }}
           name="search"
-          variant="flushed"
+          variant="outline"
           size="md"
-          bg="white"
-          css={{ "--focus-color": "colors.blue.600" }}
+          bg={{ _dark: "gray.800" }}
+          color={{ base: "black", _dark: "whiteAlpha.900" }}
+          _placeholder={{ color: { _dark: "gray.200" } }}
+          css={{ "--focus-color": "colors.gray.300" }}
         />
 
         <IconButton
           aria-label="Search database"
           variant="surface"
-          backgroundColor="blue.600"
-          color="white"
+          bg={{ base: "blue.600", _dark: "blue.500" }}
+          color={{ base: "white", _dark: "black" }}
           size="md">
           <LuSearch />
         </IconButton>
@@ -45,7 +46,8 @@ export default function SearchBar() {
             collection={languages}
             fontSize="1rem"
             size="md"
-            bg="white">
+            bg={{ base: "white", _dark: "gray.800" }}
+            color={{ base: "black", _dark: "whiteAlpha.900" }}>
             <Select.HiddenSelect />
             <Select.Control>
               <Select.Trigger>
@@ -59,7 +61,10 @@ export default function SearchBar() {
               <Select.Positioner>
                 <Select.Content>
                   {languages.items.map((language) => (
-                    <Select.Item item={language} key={language.value}>
+                    <Select.Item
+                      item={language}
+                      key={language.value}
+                      cursor="pointer">
                       {language.title}
                       <Select.ItemIndicator />
                     </Select.Item>
@@ -71,7 +76,10 @@ export default function SearchBar() {
         </Box>
 
         <Flex flexGrow="2" gap={4}>
-          <Select.Root variant="outline" size="md" bg="white">
+          <Select.Root
+            variant="outline"
+            size="md"
+            bg={{ base: "white", _dark: "gray.800" }}>
             <Select.Control>
               <Select.Trigger>
                 <Select.ValueText placeholder="Filter by" />
@@ -91,7 +99,10 @@ export default function SearchBar() {
             </Portal>
           </Select.Root>
 
-          <Button colorPalette="red" size="md" rounded="md">
+          <Button
+            bg={{ base: "red.600", _dark: "red.500" }}
+            size="md"
+            rounded="md">
             <IoDice /> Surprise me!
           </Button>
         </Flex>
