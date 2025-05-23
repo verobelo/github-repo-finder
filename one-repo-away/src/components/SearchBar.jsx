@@ -44,6 +44,7 @@ export default function SearchBar() {
         <Box flexGrow="4">
           <Select.Root
             collection={languages}
+            loopFocus
             fontSize="1rem"
             size="md"
             bg={{ base: "white", _dark: "gray.800" }}
@@ -77,6 +78,7 @@ export default function SearchBar() {
 
         <Flex flexGrow="2" gap={4}>
           <Select.Root
+            loopFocus
             variant="outline"
             size="md"
             bg={{ base: "white", _dark: "gray.800" }}>
