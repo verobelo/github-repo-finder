@@ -11,7 +11,9 @@ function App() {
       display="grid"
       minH="100dvh"
       gridTemplateRows="auto 1fr auto"
-      gap={4}>
+      gap={4}
+      bg={{ base: "white", _dark: "gray.900" }}
+      color={{ base: "black", _dark: "gray.100" }}>
       <Header />
       <Box as="main" display="grid" gridTemplateRows="auto 1fr" gap={6}>
         <SearchBar />
